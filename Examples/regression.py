@@ -49,3 +49,4 @@ plt.plot(Xp,Yridge,'b',label='ridge')
 plt.plot(Xp,Ylr,'m',label='linearregression')
 plt.legend( loc = 4 )
 
+plt.show()

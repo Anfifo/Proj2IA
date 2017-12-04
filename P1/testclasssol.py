@@ -1,6 +1,7 @@
+# -*- coding: utf-8 -*-
 import numpy as np
 from sklearn import neighbors, datasets, tree, linear_model
-from sklearn.model_selection import cross_val_score
+#from sklearn.model_selection import cross_val_score
 from sklearn.externals import joblib
 
 import classsol

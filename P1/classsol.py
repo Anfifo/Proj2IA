@@ -4,22 +4,28 @@ from sklearn import neighbors, datasets, tree, linear_model
 from sklearn.externals import joblib
 import timeit
 
-from sklearn.model_selection import cross_val_score
+#from sklearn.model_selection import cross_val_score
 
 def features(X):
     
     F = np.zeros((len(X),5))
     for x in range(0,len(X)):
         F[x,0] = len(X[x])
-        F[x,1] = nr_numbers(X[x])
+        F[x,1] = ord(X[x][0])
         F[x,2] = nr_vogals(X[x])
-        F[x,3] = nr_accents(X[x])
-        F[x,4] = 
+        F[x,3] = ord(X[x][-1])
+        F[x,4] = ASCII(X[x])
 
     return F     
 
 def mytraining(f,Y):
-    
+
+    #KNeighborsClassifier
+    n_neighbors = 2
+    #weights = 'distance'
+    weights = 'uniform'
+    clf = neighbors.KNeighborsClassifier(n_neighbors, weights=weights)
+    clf.fit(f, Y)
    
     return clf
     
@@ -43,23 +49,7 @@ def ASCII(s):
 def nr_vogals(s):
     x = 0;
     for i in range(len(s)):
-        if(s[i] in ['a','A','e','E','i','I','o','O','u', 'U'])
+        if s[i] in ['a','A','e','E','i','I','o','O','u', 'U']:
             x+=1
     return x
 
-def nr_numbers(s):
-    x = 0;
-    for i in range(len(s)):
-        if s[i] in ['0','1','2','3','4','5','6','7','8','9']:
-            x+=1
-    return x
-
-def nr_accents(S):
-    x = 0
-    for i in range(len(s)):
-        try:
-            if s[i] > 128:
-                x += 1
-        except TypeError:
-            x += 1
-    return x

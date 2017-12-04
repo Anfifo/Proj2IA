@@ -6,6 +6,10 @@ import timeit
 
 def mytraining(X,Y):
     
+    reg = KernelRidge(alpha = 10.0)
+    reg.fit(X,Y)
+
+    print(reg.score(X,Y))
    
     return reg
     
