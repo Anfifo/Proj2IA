@@ -22,8 +22,7 @@ def mytraining(f,Y):
 
     #KNeighborsClassifier
     n_neighbors = 2
-    #weights = 'distance'
-    weights = 'uniform'
+    weights = 'distance'
     #clf = neighbors.KNeighborsClassifier(n_neighbors, weights=weights)
     min_samples_split = 2
     clf = tree.DecisionTreeClassifier(min_samples_split=min_samples_split)

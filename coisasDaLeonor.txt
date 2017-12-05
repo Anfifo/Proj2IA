@@ -1,0 +1,68 @@
+Decision Tree min_samples_split = 1
+Testing wordsclass.npy
+0.264423076923
+Erro nos Q dentro dos limites de tolerância. OK
+
+Testing wordsclass2.npy
+0.185096153846
+Erro nos Q dentro dos limites de tolerância. OK
+
+
+Decision Tree min_samples_split = 2
+Testing wordsclass.npy
+0.0
+Erro bastante baixo. PERFECT!
+
+Testing wordsclass2.npy
+0.0
+Erro bastante baixo. PERFECT!
+
+
+Decision Tree min_samples_split = 3
+Testing wordsclass.npy
+0.0120192307692
+Erro bastante baixo. PERFECT!
+
+Testing wordsclass2.npy
+0.0144230769231
+Erro bastante baixo. PERFECT!
+
+
+KNeighbors Classifier weights = uniform
+Testing wordsclass.npy
+0.189903846154
+Erro nos Q dentro dos limites de tolerância. OK
+
+Testing wordsclass2.npy
+0.170673076923
+Erro nos Q dentro dos limites de tolerância. OK
+
+KNeighbors Classifier weights = distance, neighbors = 2
+Testing wordsclass.npy
+0.0
+Erro bastante baixo. PERFECT!
+
+Testing wordsclass2.npy
+0.0
+Erro bastante baixo. PERFECT!
+
+KNeighbors Classifier weights = distance, neighbors = 3
+Testing wordsclass.npy
+0.0
+Erro bastante baixo. PERFECT!
+
+Testing wordsclass2.npy
+0.0
+Erro bastante baixo. PERFECT!
+
+
+KNeighbors Classifier weights = distance neighbors = 1
+Testing wordsclass.npy
+0.0
+Erro bastante baixo. PERFECT!
+
+Testing wordsclass2.npy
+0.0
+Erro bastante baixo. PERFECT!
+
+

@@ -14,7 +14,7 @@ with open("words.txt") as file:
         words.append(line) #storing everything in memory!
 
 X = words[0]
-
+print("KNeighbors Classifier weights = distance neighbors = 1")
 for test in ["wordsclass.npy", "wordsclass2.npy"]:
     print("Testing " + test)
     #load output data
