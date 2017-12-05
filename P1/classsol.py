@@ -7,16 +7,16 @@ import timeit
 #from sklearn.model_selection import cross_val_score
 
 def features(X):
-    
+
     F = np.zeros((len(X),5))
     for x in range(0,len(X)):
         F[x,0] = len(X[x])
         F[x,1] = ord(X[x][0])
         F[x,2] = nr_vogals(X[x])
         F[x,3] = ord(X[x][-1])
-        F[x,4] = ASCII(X[x])
+        F[x,4] = hash(X[x])#ASCII(X[x])
 
-    return F     
+    return F
 
 def mytraining(f,Y):
 
@@ -24,13 +24,15 @@ def mytraining(f,Y):
     n_neighbors = 2
     #weights = 'distance'
     weights = 'uniform'
-    clf = neighbors.KNeighborsClassifier(n_neighbors, weights=weights)
+    #clf = neighbors.KNeighborsClassifier(n_neighbors, weights=weights)
+    min_samples_split = 2
+    clf = tree.DecisionTreeClassifier(min_samples_split=min_samples_split)
     clf.fit(f, Y)
-   
+
     return clf
-    
+
 def mytrainingaux(f,Y,par):
-    
+
     return clf
 
 def myprediction(f, clf):
@@ -52,4 +54,3 @@ def nr_vogals(s):
         if s[i] in ['a','A','e','E','i','I','o','O','u', 'U']:
             x+=1
     return x
-
