@@ -6,14 +6,15 @@ import timeit
 
 def mytraining(X,Y):
     
-    reg = KernelRidge(alpha = 10.0)
+    min_samples_split = 5
+    reg =  KernelRidge(alpha = 0.1)
+    #reg = KernelRidge(kernel='rbf', gamma=0.1 ,alpha=0.1)
     reg.fit(X,Y)
-
-    print(reg.score(X,Y))
    
     return reg
     
 def mytrainingaux(X,Y,par):
+    
     
     reg.fit(X,Y)
                 
