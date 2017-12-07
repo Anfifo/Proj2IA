@@ -1,0 +1,100 @@
+Testing regress.npy
+
+Best score:  -0.138851744794
+
+Best estimator:  SVR(C=100.0, cache_size=200, coef0=0.0, degree=3, epsilon=0.1, gamma=0.1,
+  kernel='rbf', max_iter=-1, shrinking=True, tol=0.001, verbose=False)
+
+Grid scores: 
+-0.872 (+/-0.394) for {'C': 0.1, 'kernel': 'rbf', 'gamma': 0.0001}
+-0.874 (+/-0.393) for {'C': 0.1, 'kernel': 'rbf', 'gamma': 0.001}
+-0.947 (+/-0.462) for {'C': 0.1, 'kernel': 'rbf', 'gamma': 0.01}
+-0.947 (+/-0.647) for {'C': 0.1, 'kernel': 'rbf', 'gamma': 0.1}
+-0.783 (+/-0.355) for {'C': 0.1, 'kernel': 'rbf', 'gamma': 1}
+-0.874 (+/-0.392) for {'C': 1.0, 'kernel': 'rbf', 'gamma': 0.0001}
+-0.936 (+/-0.451) for {'C': 1.0, 'kernel': 'rbf', 'gamma': 0.001}
+-1.189 (+/-0.804) for {'C': 1.0, 'kernel': 'rbf', 'gamma': 0.01}
+-0.606 (+/-1.393) for {'C': 1.0, 'kernel': 'rbf', 'gamma': 0.1}
+-0.455 (+/-0.483) for {'C': 1.0, 'kernel': 'rbf', 'gamma': 1}
+-0.931 (+/-0.444) for {'C': 10.0, 'kernel': 'rbf', 'gamma': 0.0001}
+-1.034 (+/-0.643) for {'C': 10.0, 'kernel': 'rbf', 'gamma': 0.001}
+-2.006 (+/-2.547) for {'C': 10.0, 'kernel': 'rbf', 'gamma': 0.01}
+-0.186 (+/-0.353) for {'C': 10.0, 'kernel': 'rbf', 'gamma': 0.1}
+-0.415 (+/-0.721) for {'C': 10.0, 'kernel': 'rbf', 'gamma': 1}
+-1.009 (+/-0.623) for {'C': 100.0, 'kernel': 'rbf', 'gamma': 0.0001}
+-1.393 (+/-1.258) for {'C': 100.0, 'kernel': 'rbf', 'gamma': 0.001}
+-2.500 (+/-5.274) for {'C': 100.0, 'kernel': 'rbf', 'gamma': 0.01}
+-0.139 (+/-0.188) for {'C': 100.0, 'kernel': 'rbf', 'gamma': 0.1}
+-0.415 (+/-0.721) for {'C': 100.0, 'kernel': 'rbf', 'gamma': 1}
+-1.107 (+/-0.857) for {'C': 1000.0, 'kernel': 'rbf', 'gamma': 0.0001}
+-2.495 (+/-2.919) for {'C': 1000.0, 'kernel': 'rbf', 'gamma': 0.001}
+-5.118 (+/-11.112) for {'C': 1000.0, 'kernel': 'rbf', 'gamma': 0.01}
+-0.161 (+/-0.237) for {'C': 1000.0, 'kernel': 'rbf', 'gamma': 0.1}
+-0.415 (+/-0.721) for {'C': 1000.0, 'kernel': 'rbf', 'gamma': 1}
+-1.380 (+/-1.304) for {'C': 10000.0, 'kernel': 'rbf', 'gamma': 0.0001}
+-2.906 (+/-4.611) for {'C': 10000.0, 'kernel': 'rbf', 'gamma': 0.001}
+-3.151 (+/-10.740) for {'C': 10000.0, 'kernel': 'rbf', 'gamma': 0.01}
+-2.964 (+/-9.594) for {'C': 10000.0, 'kernel': 'rbf', 'gamma': 0.1}
+-0.415 (+/-0.721) for {'C': 10000.0, 'kernel': 'rbf', 'gamma': 1}
+-2.514 (+/-2.779) for {'C': 100000.0, 'kernel': 'rbf', 'gamma': 0.0001}
+-3.632 (+/-7.470) for {'C': 100000.0, 'kernel': 'rbf', 'gamma': 0.001}
+-3.371 (+/-9.544) for {'C': 100000.0, 'kernel': 'rbf', 'gamma': 0.01}
+-36.118 (+/-133.997) for {'C': 100000.0, 'kernel': 'rbf', 'gamma': 0.1}
+-0.415 (+/-0.721) for {'C': 100000.0, 'kernel': 'rbf', 'gamma': 1}
+-2.509 (+/-4.081) for {'C': 1000000.0, 'kernel': 'rbf', 'gamma': 0.0001}
+-9.726 (+/-20.463) for {'C': 1000000.0, 'kernel': 'rbf', 'gamma': 0.001}
+-10.459 (+/-26.666) for {'C': 1000000.0, 'kernel': 'rbf', 'gamma': 0.01}
+-385.887 (+/-1622.741) for {'C': 1000000.0, 'kernel': 'rbf', 'gamma': 0.1}
+-0.415 (+/-0.721) for {'C': 1000000.0, 'kernel': 'rbf', 'gamma': 1}
+
+_____________________________________________________________________________
+
+Testing regress2.npy
+
+Best score:  -9.0562837658
+
+Best estimator:  SVR(C=1000000.0, cache_size=200, coef0=0.0, degree=3, epsilon=0.1, gamma=0.01,
+  kernel='rbf', max_iter=-1, shrinking=True, tol=0.001, verbose=False)
+
+Grid scores: 
+-2393.837 (+/-5976.461) for {'C': 0.1, 'kernel': 'rbf', 'gamma': 0.0001}
+-2392.114 (+/-5973.095) for {'C': 0.1, 'kernel': 'rbf', 'gamma': 0.001}
+-2379.890 (+/-5950.220) for {'C': 0.1, 'kernel': 'rbf', 'gamma': 0.01}
+-2376.867 (+/-5957.213) for {'C': 0.1, 'kernel': 'rbf', 'gamma': 0.1}
+-2395.628 (+/-5986.142) for {'C': 0.1, 'kernel': 'rbf', 'gamma': 1}
+-2392.051 (+/-5972.959) for {'C': 1.0, 'kernel': 'rbf', 'gamma': 0.0001}
+-2374.863 (+/-5939.352) for {'C': 1.0, 'kernel': 'rbf', 'gamma': 0.001}
+-2263.370 (+/-5726.720) for {'C': 1.0, 'kernel': 'rbf', 'gamma': 0.01}
+-2334.517 (+/-5945.136) for {'C': 1.0, 'kernel': 'rbf', 'gamma': 0.1}
+-2436.737 (+/-6094.225) for {'C': 1.0, 'kernel': 'rbf', 'gamma': 1}
+-2374.244 (+/-5937.998) for {'C': 10.0, 'kernel': 'rbf', 'gamma': 0.0001}
+-2217.050 (+/-5624.056) for {'C': 10.0, 'kernel': 'rbf', 'gamma': 0.001}
+-1798.435 (+/-4734.938) for {'C': 10.0, 'kernel': 'rbf', 'gamma': 0.01}
+-2207.663 (+/-5543.326) for {'C': 10.0, 'kernel': 'rbf', 'gamma': 0.1}
+-2673.804 (+/-6758.266) for {'C': 10.0, 'kernel': 'rbf', 'gamma': 1}
+-2211.492 (+/-5611.075) for {'C': 100.0, 'kernel': 'rbf', 'gamma': 0.0001}
+-1610.243 (+/-4307.584) for {'C': 100.0, 'kernel': 'rbf', 'gamma': 0.001}
+-1883.741 (+/-3863.897) for {'C': 100.0, 'kernel': 'rbf', 'gamma': 0.01}
+-1326.075 (+/-3316.408) for {'C': 100.0, 'kernel': 'rbf', 'gamma': 0.1}
+-2733.940 (+/-6833.250) for {'C': 100.0, 'kernel': 'rbf', 'gamma': 1}
+-1585.388 (+/-4250.855) for {'C': 1000.0, 'kernel': 'rbf', 'gamma': 0.0001}
+-1316.274 (+/-2478.558) for {'C': 1000.0, 'kernel': 'rbf', 'gamma': 0.001}
+-2959.286 (+/-6349.531) for {'C': 1000.0, 'kernel': 'rbf', 'gamma': 0.01}
+-582.911 (+/-1461.360) for {'C': 1000.0, 'kernel': 'rbf', 'gamma': 0.1}
+-2931.746 (+/-7194.860) for {'C': 1000.0, 'kernel': 'rbf', 'gamma': 1}
+-1228.673 (+/-2311.650) for {'C': 10000.0, 'kernel': 'rbf', 'gamma': 0.0001}
+-1689.798 (+/-3101.526) for {'C': 10000.0, 'kernel': 'rbf', 'gamma': 0.001}
+-88.226 (+/-222.184) for {'C': 10000.0, 'kernel': 'rbf', 'gamma': 0.01}
+-257.903 (+/-631.887) for {'C': 10000.0, 'kernel': 'rbf', 'gamma': 0.1}
+-2931.746 (+/-7194.860) for {'C': 10000.0, 'kernel': 'rbf', 'gamma': 1}
+-1276.499 (+/-2356.005) for {'C': 100000.0, 'kernel': 'rbf', 'gamma': 0.0001}
+-3371.189 (+/-6922.046) for {'C': 100000.0, 'kernel': 'rbf', 'gamma': 0.001}
+-69.567 (+/-166.962) for {'C': 100000.0, 'kernel': 'rbf', 'gamma': 0.01}
+-122.632 (+/-303.476) for {'C': 100000.0, 'kernel': 'rbf', 'gamma': 0.1}
+-2931.746 (+/-7194.860) for {'C': 100000.0, 'kernel': 'rbf', 'gamma': 1}
+-1669.621 (+/-3103.890) for {'C': 1000000.0, 'kernel': 'rbf', 'gamma': 0.0001}
+-2782.758 (+/-6128.888) for {'C': 1000000.0, 'kernel': 'rbf', 'gamma': 0.001}
+-9.056 (+/-29.789) for {'C': 1000000.0, 'kernel': 'rbf', 'gamma': 0.01}
+-20.483 (+/-50.271) for {'C': 1000000.0, 'kernel': 'rbf', 'gamma': 0.1}
+-2931.746 (+/-7194.860) for {'C': 1000000.0, 'kernel': 'rbf', 'gamma': 1}
+

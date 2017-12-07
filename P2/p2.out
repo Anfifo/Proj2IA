@@ -1,0 +1,52 @@
+Testing regress.npy
+
+Best score:  -0.0964262077551
+
+Best estimator:  KernelRidge(alpha=0.001, coef0=1, degree=3, gamma=0.1, kernel='rbf',
+      kernel_params=None)
+
+Grid scores: 
+-0.227 (+/-0.312) for {'alpha': 0.1, 'kernel': 'rbf', 'gamma': 0.1}
+-4.973 (+/-16.260) for {'alpha': 0.1, 'kernel': 'polynomial', 'gamma': 0.1}
+-0.603 (+/-0.739) for {'alpha': 0.1, 'kernel': 'laplacian', 'gamma': 0.1}
+-2.626 (+/-4.426) for {'alpha': 0.1, 'kernel': 'linear', 'gamma': 0.1}
+-0.880 (+/-0.847) for {'alpha': 0.1, 'kernel': 'rbf', 'gamma': 0.001}
+-0.910 (+/-0.849) for {'alpha': 0.1, 'kernel': 'polynomial', 'gamma': 0.001}
+-0.746 (+/-0.568) for {'alpha': 0.1, 'kernel': 'laplacian', 'gamma': 0.001}
+-2.626 (+/-4.426) for {'alpha': 0.1, 'kernel': 'linear', 'gamma': 0.001}
+-0.096 (+/-0.145) for {'alpha': 0.001, 'kernel': 'rbf', 'gamma': 0.1}
+-11.206 (+/-24.447) for {'alpha': 0.001, 'kernel': 'polynomial', 'gamma': 0.1}
+-0.438 (+/-0.720) for {'alpha': 0.001, 'kernel': 'laplacian', 'gamma': 0.1}
+-2.627 (+/-4.428) for {'alpha': 0.001, 'kernel': 'linear', 'gamma': 0.1}
+-1.653 (+/-1.875) for {'alpha': 0.001, 'kernel': 'rbf', 'gamma': 0.001}
+-1.885 (+/-2.544) for {'alpha': 0.001, 'kernel': 'polynomial', 'gamma': 0.001}
+-0.695 (+/-1.320) for {'alpha': 0.001, 'kernel': 'laplacian', 'gamma': 0.001}
+-2.627 (+/-4.428) for {'alpha': 0.001, 'kernel': 'linear', 'gamma': 0.001}
+Erro dentro dos limites de tolerância. OK
+
+Testing regress2.npy
+
+Best score:  -0.0984975737769
+
+Best estimator:  KernelRidge(alpha=0.001, coef0=1, degree=3, gamma=0.1, kernel='polynomial',
+      kernel_params=None)
+
+Grid scores: 
+-1264.740 (+/-3243.011) for {'alpha': 0.1, 'kernel': 'rbf', 'gamma': 0.1}
+-12.563 (+/-30.190) for {'alpha': 0.1, 'kernel': 'polynomial', 'gamma': 0.1}
+-1599.034 (+/-3870.684) for {'alpha': 0.1, 'kernel': 'laplacian', 'gamma': 0.1}
+-550.074 (+/-873.169) for {'alpha': 0.1, 'kernel': 'linear', 'gamma': 0.1}
+-1303.746 (+/-3046.216) for {'alpha': 0.1, 'kernel': 'rbf', 'gamma': 0.001}
+-1140.134 (+/-2510.485) for {'alpha': 0.1, 'kernel': 'polynomial', 'gamma': 0.001}
+-2806.833 (+/-7001.557) for {'alpha': 0.1, 'kernel': 'laplacian', 'gamma': 0.001}
+-550.074 (+/-873.169) for {'alpha': 0.1, 'kernel': 'linear', 'gamma': 0.001}
+-547.943 (+/-1400.213) for {'alpha': 0.001, 'kernel': 'rbf', 'gamma': 0.1}
+-0.098 (+/-0.145) for {'alpha': 0.001, 'kernel': 'polynomial', 'gamma': 0.1}
+-1361.438 (+/-3431.449) for {'alpha': 0.001, 'kernel': 'laplacian', 'gamma': 0.1}
+-549.715 (+/-870.881) for {'alpha': 0.001, 'kernel': 'linear', 'gamma': 0.1}
+-1621.042 (+/-2770.704) for {'alpha': 0.001, 'kernel': 'rbf', 'gamma': 0.001}
+-1877.724 (+/-3309.907) for {'alpha': 0.001, 'kernel': 'polynomial', 'gamma': 0.001}
+-1482.832 (+/-3549.883) for {'alpha': 0.001, 'kernel': 'laplacian', 'gamma': 0.001}
+-549.715 (+/-870.881) for {'alpha': 0.001, 'kernel': 'linear', 'gamma': 0.001}
+Erro dentro dos limites de tolerância. OK
+

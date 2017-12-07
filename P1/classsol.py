@@ -15,31 +15,28 @@ def features(X):
         F[x,1] = ord(X[x][0])
         F[x,2] = nr_vogals(X[x])
         F[x,3] = ord(X[x][-1])
-        F[x,4] = hash(X[x])#ASCII(X[x])
+        F[x,4] = hash(X[x])
 
     return F
 
 def mytraining(f,Y):
 
-    #KNeighborsClassifier
-    n_neighbors = 2
-    weights = 'distance'
-    #clf = neighbors.KNeighborsClassifier(n_neighbors, weights=weights)
-    min_samples_split = 2
-    clf = tree.DecisionTreeClassifier(min_samples_split=min_samples_split)
+    clf = neighbors.KNeighborsClassifier(weights='distance',n_neighbors=3)
     clf.fit(f, Y)
 
     return clf
 
 def mytrainingaux(f,Y,par):
-    scores =['precision', 'recall']
+    scores =['f1']
     for score in scores:
         clf = GridSearchCV(neighbors.KNeighborsClassifier(), cv = 5, param_grid = par, scoring = '%s_macro' %score)
         clf.fit(f,Y)
 
-        print("Best params: ", clf.best_params_)
+        print("\nscore = ", score)
 
-        print("Grid scores: ")
+        print("\nBest params: ", clf.best_params_)
+
+        print("\nGrid scores: ")
 
         means = clf.cv_results_['mean_test_score']
         stds = clf.cv_results_['std_test_score']
@@ -47,6 +44,10 @@ def mytrainingaux(f,Y,par):
         for mean, std, params in zip(means, stds, clf.cv_results_['params']):
             print("%0.3f (+/-%0.03f) for %r"
                   % (mean, std * 2, params))
+        for mean, std, params in zip(means, stds, clf.cv_results_['params']):
+            print("%0.3f"
+                  % (mean))
+
 
     return clf
 
@@ -55,13 +56,6 @@ def myprediction(f, clf):
 
     return Ypred
 
-
-
-def ASCII(s):
-    x = 0
-    for i in range(len(s)):
-        x += ord(s[i])*2**(8 * (len(s) - i - 1))
-    return x
 
 def nr_vogals(s):
     x = 0;

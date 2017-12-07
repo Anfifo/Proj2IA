@@ -16,26 +16,26 @@ for ii,test in enumerate(["regress.npy", "regress2.npy"]):
     
     X,Y,Xp,Yp = np.load(test)
     
-    par = [{'kernel': ['rbf','polynomial','laplacian', 'linear'], 'gamma': [0.1,0.001], 'alpha':[0.1,0.001]}]
+    par = [{'kernel': ['rbf','polynomial'], 'gamma': [1.0,0.1,0.01,0.001], 'alpha':[1.0,0.1,0.01,0.001]}]
     
-    reg = regsol.mytrainingaux(X,Y,par)
+    #reg = regsol.mytrainingaux(X,Y,par)
 
-    #par2 = [{'alpha': [0.001,0.1,0.2,0.5,1]}]
+    par2 = [{'kernel': ['rbf'], 'C': [0.1,1e0,1e1,1e2,1e3,1e4,1e5,1e6], 'gamma':[0.0001,0.001,0.01,0.1,1]}]
     #reg = regsol.mytrainingaux2(X,Y,par2)
     
-    #reg = regsol.mytraining(X,Y)
-    
+    reg = regsol.mytraining(X,Y)
+  
     Ypred = regsol.myprediction(Xp,reg)
-    
-    if -cross_val_score( reg, X, Y, cv = 5, scoring = 'neg_mean_squared_error').mean() < tres[ii]:
+    print(-cross_val_score( reg, X, Y.ravel(), cv = 5, scoring = 'neg_mean_squared_error').mean(),"\n")
+    if -cross_val_score( reg, X, Y.ravel(), cv = 5, scoring = 'neg_mean_squared_error').mean() < tres[ii]:
         print("Erro dentro dos limites de tolerância. OK\n")
     else:
         print("Erro acima dos limites de tolerância. FAILED\n")    
-    """plt.figure()
+    plt.figure()
     plt.plot(Xp,Yp,'g.',label='datatesting')
     plt.plot(X,Y,'k+',label='datatrain')
     plt.plot(Xp,Ypred,'m',label='linregres1')
     plt.legend( loc = 1 )
-    plt.show()"""
+    plt.show()
 
 

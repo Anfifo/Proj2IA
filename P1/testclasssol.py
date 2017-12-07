@@ -1,10 +1,12 @@
-# -*- coding: iso-8859-1 -*-
+# -*- coding: utf-8 -*-
 import numpy as np
 from sklearn import neighbors, datasets, tree, linear_model
-#from sklearn.model_selection import cross_val_score
+from sklearn.model_selection import cross_val_score
 from sklearn.externals import joblib
 
 import classsol
+
+
 
 #load input data
 words = []
@@ -21,14 +23,15 @@ for test in ["wordsclass.npy", "wordsclass2.npy"]:
 
     f = classsol.features(X)
 
-    #clf = classsol.mytraining(f,Y)
+    clf = classsol.mytraining(f,Y)
 
-    par = [{'n_neighbors':[1,2,3,4,5], 'weights':['distance','uniform']}]
-    clf = classsol.mytrainingaux(f,Y,par)
+    #par = [{'criterion':['gini','entropy'],'min_samples_split':[0.5,1.0,2,3,4,5,6,7,8,10]}]
+    #par = [{'weights': ['uniform','distance'],'n_neighbors':range(1,11)}]
+    #clf = classsol.mytrainingaux(f,Y,par)
 
     Ypred = classsol.myprediction(f, clf)
 
-    print(np.sum(Y^Ypred)/len(X))
+    #print(np.sum(Y^Ypred)/len(X))
 
     if (np.sum(Y^Ypred)/len(X))<.05:
         print("Erro bastante baixo. PERFECT!\n")

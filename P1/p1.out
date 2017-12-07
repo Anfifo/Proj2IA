@@ -1,0 +1,74 @@
+Testing wordsclass.npy
+
+Best params:  {'min_samples_split': 6}
+
+Grid scores: 
+0.471 (+/-0.254) for {'min_samples_split': 0.5}
+0.424 (+/-0.226) for {'min_samples_split': 1.0}
+0.841 (+/-0.256) for {'min_samples_split': 2}
+0.834 (+/-0.267) for {'min_samples_split': 3}
+0.841 (+/-0.255) for {'min_samples_split': 4}
+0.849 (+/-0.265) for {'min_samples_split': 5}
+0.860 (+/-0.225) for {'min_samples_split': 6}
+0.856 (+/-0.220) for {'min_samples_split': 7}
+0.848 (+/-0.209) for {'min_samples_split': 8}
+0.850 (+/-0.212) for {'min_samples_split': 10}
+
+score =  recall
+
+Best params:  {'min_samples_split': 6}
+
+Grid scores: 
+0.541 (+/-0.104) for {'min_samples_split': 0.5}
+0.516 (+/-0.066) for {'min_samples_split': 1.0}
+0.792 (+/-0.254) for {'min_samples_split': 2}
+0.792 (+/-0.264) for {'min_samples_split': 3}
+0.796 (+/-0.250) for {'min_samples_split': 4}
+0.809 (+/-0.251) for {'min_samples_split': 5}
+0.834 (+/-0.251) for {'min_samples_split': 6}
+0.797 (+/-0.265) for {'min_samples_split': 7}
+0.802 (+/-0.256) for {'min_samples_split': 8}
+0.788 (+/-0.248) for {'min_samples_split': 10}
+
+0.0336538461538
+Erro bastante baixo. PERFECT!
+
+
+__________________________________________________
+
+Testing wordclass2.npy
+
+score =  precision
+
+Best params:  {'min_samples_split': 4}
+
+Grid scores: 
+0.630 (+/-0.319) for {'min_samples_split': 0.5}
+0.535 (+/-0.270) for {'min_samples_split': 1.0}
+0.788 (+/-0.204) for {'min_samples_split': 2}
+0.784 (+/-0.208) for {'min_samples_split': 3}
+0.800 (+/-0.206) for {'min_samples_split': 4}
+0.798 (+/-0.203) for {'min_samples_split': 5}
+0.800 (+/-0.208) for {'min_samples_split': 6}
+0.789 (+/-0.211) for {'min_samples_split': 7}
+0.770 (+/-0.211) for {'min_samples_split': 8}
+0.767 (+/-0.215) for {'min_samples_split': 10}
+
+score =  recall
+
+Best params:  {'min_samples_split': 4}
+
+Grid scores: 
+0.648 (+/-0.279) for {'min_samples_split': 0.5}
+0.559 (+/-0.130) for {'min_samples_split': 1.0}
+0.772 (+/-0.184) for {'min_samples_split': 2}
+0.789 (+/-0.191) for {'min_samples_split': 3}
+0.799 (+/-0.205) for {'min_samples_split': 4}
+0.784 (+/-0.194) for {'min_samples_split': 5}
+0.794 (+/-0.209) for {'min_samples_split': 6}
+0.781 (+/-0.197) for {'min_samples_split': 7}
+0.770 (+/-0.191) for {'min_samples_split': 8}
+0.763 (+/-0.181) for {'min_samples_split': 10}
+
+0.0192307692308
+Erro bastante baixo. PERFECT!
