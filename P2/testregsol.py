@@ -15,8 +15,15 @@ for ii,test in enumerate(["regress.npy", "regress2.npy"]):
     print("Testing " + test)
     
     X,Y,Xp,Yp = np.load(test)
-       
-    reg = regsol.mytraining(X,Y)
+    
+    par = [{'kernel': ['rbf','polynomial','laplacian', 'linear'], 'gamma': [0.1,0.001], 'alpha':[0.1,0.001]}]
+    
+    reg = regsol.mytrainingaux(X,Y,par)
+
+    #par2 = [{'alpha': [0.001,0.1,0.2,0.5,1]}]
+    #reg = regsol.mytrainingaux2(X,Y,par2)
+    
+    #reg = regsol.mytraining(X,Y)
     
     Ypred = regsol.myprediction(Xp,reg)
     
@@ -24,11 +31,11 @@ for ii,test in enumerate(["regress.npy", "regress2.npy"]):
         print("Erro dentro dos limites de tolerância. OK\n")
     else:
         print("Erro acima dos limites de tolerância. FAILED\n")    
-    plt.figure()
+    """plt.figure()
     plt.plot(Xp,Yp,'g.',label='datatesting')
     plt.plot(X,Y,'k+',label='datatrain')
     plt.plot(Xp,Ypred,'m',label='linregres1')
     plt.legend( loc = 1 )
-    plt.show()
+    plt.show()"""
 
 
