@@ -1,11 +1,13 @@
+#Grupo 2: André Fonseca (84698), Leonor Loureiro (84736)
+
 import numpy as np
 from sklearn import neighbors, datasets, tree, linear_model
 
 from sklearn.externals import joblib
 import timeit
 
-from sklearn.model_selection import GridSearchCV
 from sklearn.model_selection import cross_val_score
+
 
 def features(X):
 
@@ -23,31 +25,11 @@ def mytraining(f,Y):
 
     clf = neighbors.KNeighborsClassifier(weights='distance',n_neighbors=3)
     clf.fit(f, Y)
-
     return clf
 
 def mytrainingaux(f,Y,par):
-    scores =['f1']
-    for score in scores:
-        clf = GridSearchCV(neighbors.KNeighborsClassifier(), cv = 5, param_grid = par, scoring = '%s_macro' %score)
-        clf.fit(f,Y)
-
-        print("\nscore = ", score)
-
-        print("\nBest params: ", clf.best_params_)
-
-        print("\nGrid scores: ")
-
-        means = clf.cv_results_['mean_test_score']
-        stds = clf.cv_results_['std_test_score']
-
-        for mean, std, params in zip(means, stds, clf.cv_results_['params']):
-            print("%0.3f (+/-%0.03f) for %r"
-                  % (mean, std * 2, params))
-        for mean, std, params in zip(means, stds, clf.cv_results_['params']):
-            print("%0.3f"
-                  % (mean))
-
+    
+    clf.fit(f,Y)
 
     return clf
 

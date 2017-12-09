@@ -22,7 +22,7 @@ for test in ["wordsclass.npy", "wordsclass2.npy"]:
     Y=np.load(test)
 
     f = classsol.features(X)
-
+    #classsol.myfeatureselection(f,Y)
     clf = classsol.mytraining(f,Y)
 
     #par = [{'criterion':['gini','entropy'],'min_samples_split':[0.5,1.0,2,3,4,5,6,7,8,10]}]
